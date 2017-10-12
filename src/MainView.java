@@ -69,14 +69,20 @@ public class MainView extends JFrame {
         addButton.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed( ActionEvent e ) {
-                if ( shapeWindow != null ) {
-                    if ( blueCheck.isSelected() )
-                        shapeWindow.addIcon( IconColor.BLUE );
-                    if ( redCheck.isSelected() )
-                        shapeWindow.addIcon( IconColor.RED );
-                    if ( yellowCheck.isSelected() )
-                        shapeWindow.addIcon( IconColor.YELLOW );
+                if ( shapeWindow == null ) {
+                    createShapeWindow();
+                    shapeWindow.setVisible( true );
                 }
+
+                if ( blueCheck.isSelected() )
+                    shapeWindow.addIcon( IconColor.BLUE );
+
+                if ( redCheck.isSelected() )
+                    shapeWindow.addIcon( IconColor.RED );
+
+                if ( yellowCheck.isSelected() )
+                    shapeWindow.addIcon( IconColor.YELLOW );
+
             }
         } );
         guiPanel.add( addButton );
@@ -88,29 +94,18 @@ public class MainView extends JFrame {
         removeButton.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed( ActionEvent e ) {
-                if ( shapeWindow != null ) {
-                    if ( blueCheck.isSelected() )
-                        shapeWindow.removeIcon( IconColor.BLUE );
-                    if ( redCheck.isSelected() )
-                        shapeWindow.removeIcon( IconColor.RED );
-                    if ( yellowCheck.isSelected() )
-                        shapeWindow.removeIcon( IconColor.YELLOW );
-                }
+                if ( shapeWindow != null )
+                    shapeWindow.removeIcon();
+
             }
         } );
         guiPanel.add( removeButton );
     }
 
     private void initCheckBoxes() {
-        ButtonGroup group = new ButtonGroup();
-
         blueCheck = new JCheckBox( "Blue", true );
         redCheck = new JCheckBox( "Red", false );
         yellowCheck = new JCheckBox( "Yellow", false );
-
-        group.add( blueCheck );
-        group.add( redCheck );
-        group.add( yellowCheck );
 
         guiPanel.add( blueCheck );
         guiPanel.add( redCheck );

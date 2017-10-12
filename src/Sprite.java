@@ -16,6 +16,9 @@ public class Sprite implements MoveableShape {
     private int positionX;
     private int positionY;
 
+    private int velocityX;
+    private int velocityY;
+
     private int imageWidth;
     private int drawWidth;
     private int imageHeight;
@@ -27,7 +30,7 @@ public class Sprite implements MoveableShape {
      * @param path String image location.
      */
     public Sprite( String path ) {
-        this( path, 0, 0 );
+        this( path, 0, 0, 0, 0 );
     }
 
     /**
@@ -38,7 +41,7 @@ public class Sprite implements MoveableShape {
      * @param startX starting X position
      * @param startY starting Y position
      */
-    public Sprite( String path, int startX, int startY ) {
+    public Sprite( String path, int startX, int startY, int velocityX, int velocityY ) {
         positionX = startX;
         positionY = startY;
 
@@ -46,27 +49,21 @@ public class Sprite implements MoveableShape {
 
         drawWidth = imageWidth;
         drawHeight = imageHeight;
+
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
     }
 
-    /**
-     * Load an image file as a sprite.  Width and Height will be based on passed in parameters, position will be
-     * (startX, startY).
-     *
-     * @param path   String image location
-     * @param startX starting X position
-     * @param startY starting Y position
-     * @param drawWidth  width to draw image at
-     * @param drawHeight height to draw image at
-     */
-    public Sprite( String path, int startX, int startY, int drawWidth, int drawHeight ) {
-        positionX = startX;
-        positionY = startY;
 
-        loadImage( path );
-
-        this.drawWidth = Math.max( drawWidth, 0 );
-        this.drawHeight = Math.max( drawHeight, 0 );
-    }
+//    public Sprite( String path, int startX, int startY, int drawWidth, int drawHeight ) {
+//        positionX = startX;
+//        positionY = startY;
+//
+//        loadImage( path );
+//
+//        this.drawWidth = Math.max( drawWidth, 0 );
+//        this.drawHeight = Math.max( drawHeight, 0 );
+//    }
 
     //Load an Image file from disc into memory
     private boolean loadImage( String path ) {
@@ -89,9 +86,15 @@ public class Sprite implements MoveableShape {
 
     @Override
     public void draw( Graphics2D g2 ) {
-        g2.scale( drawWidth/ ((double)imageWidth), drawHeight/((double)imageHeight) );
+        //g2.scale( drawWidth/ ((double)imageWidth), drawHeight/((double)imageHeight) );
         g2.drawImage( image, positionX, positionY, null );
         System.out.println( "Drawing sprite at " + positionX + ", " + positionY );
+    }
+
+    @Override
+    public void applyVelocity() {
+        positionX += velocityX;
+        positionY += velocityY;
     }
 
     @Override
@@ -121,8 +124,18 @@ public class Sprite implements MoveableShape {
     }
 
     @Override
-    public void setPosition( int x, int y) {
+    public void setPosition( int x, int y ) {
         positionX = x;
         positionY = y;
+    }
+
+    @Override
+    public int getVelocityX() {
+        return velocityX;
+    }
+
+    @Override
+    public int getVelocityY() {
+        return velocityY;
     }
 }

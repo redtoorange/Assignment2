@@ -8,6 +8,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * ShapeWindow.java - Description
@@ -16,26 +17,18 @@ import java.io.IOException;
  * @version 10/4/2017
  */
 public class ShapeWindow extends JFrame {
-
     private static final int DELAY = 10;
     private static final int ICON_WIDTH = 100;
     private static final int ICON_HEIGHT = 100;
-
     private static final int WINDOW_WIDTH = 500;
     private static final int WINDOW_HEIGHT = 500;
-
+    private Random rand = new Random();
     private JPanel uiPanel;
     private JLabel iconCountLabel;
     private Timer updateTimer;
 
-    private JLabel redLabel;
-    private MultiShapeIcon reds;
-
-    private JLabel blueLabel;
-    private MultiShapeIcon blues;
-
-    private JLabel yellowLabel;
-    private MultiShapeIcon yellows;
+    private JLabel iconLabel;
+    private MultiShapeIcon iconShapes;
 
     private MainView view;
 
@@ -43,23 +36,11 @@ public class ShapeWindow extends JFrame {
         this.view = view;
 
 
-        reds = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
-        redLabel = new JLabel( reds );
-        redLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
-        redLabel.setBorder( new LineBorder( Color.BLACK ) );
-        add( redLabel );
-
-        blues = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
-        blueLabel = new JLabel( blues );
-        blueLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
-        blueLabel.setBorder( new LineBorder( Color.BLACK ) );
-        add( blueLabel );
-
-        yellows = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
-        yellowLabel = new JLabel( yellows );
-        yellowLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
-        yellowLabel.setBorder( new LineBorder( Color.BLACK ) );
-        add( yellowLabel );
+        iconShapes = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
+        iconLabel = new JLabel( iconShapes );
+        iconLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
+        iconLabel.setBorder( new LineBorder( Color.BLACK ) );
+        add( iconLabel );
 
         initGUI();
         initTimer();
@@ -68,9 +49,7 @@ public class ShapeWindow extends JFrame {
     private void initTimer() {
         updateTimer = new Timer( DELAY, new ActionListener() {
             public void actionPerformed( ActionEvent event ) {
-                reds.update();
-                blues.update();
-                yellows.update();
+                iconShapes.update();
                 repaint();
             }
         } );
@@ -85,7 +64,6 @@ public class ShapeWindow extends JFrame {
 
         iconCountLabel = new JLabel();
         uiPanel.add( iconCountLabel );
-        updateCountLabel();
 
         JButton hideButton = new JButton( "Hide" );
         uiPanel.add( hideButton );
@@ -93,6 +71,15 @@ public class ShapeWindow extends JFrame {
             @Override
             public void actionPerformed( ActionEvent e ) {
                 setVisible( false );
+            }
+        } );
+
+        JButton exitButton = new JButton( "Exit" );
+        uiPanel.add( exitButton );
+        exitButton.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed( ActionEvent e ) {
+                close();
             }
         } );
     }
@@ -122,6 +109,9 @@ public class ShapeWindow extends JFrame {
         if ( visible && !updateTimer.isRunning() ) {
             updateTimer.start();
         }
+        if ( !visible && updateTimer.isRunning() ) {
+            updateTimer.stop();
+        }
 
         super.setVisible( visible );
     }
@@ -135,43 +125,33 @@ public class ShapeWindow extends JFrame {
     }
 
     public void addIcon( IconColor color ) {
+        int startX = rand.nextInt( WINDOW_WIDTH );
+        int startY = rand.nextInt( WINDOW_HEIGHT );
+
+        int velX = rand.nextInt( 6 ) - 3;
+        int velY = rand.nextInt( 6 ) - 3;
+
+
+        while ( velX == 0 )
+            velX = rand.nextInt( 6 ) - 3;
+        while ( velY == 0 )
+            velY = rand.nextInt( 6 ) - 3;
+
         //Do something
         switch ( color ) {
             case RED:
-                reds.addShape( new Sprite( "images/red_0.png", 0, 200, ICON_WIDTH, ICON_HEIGHT ) );
+                iconShapes.addShape( new Sprite( "images/red_0.png", startX, startY, velX, velY ) );
                 break;
             case BLUE:
-                blues.addShape( new Sprite( "images/blue_0.png", 0, 200, ICON_WIDTH, ICON_HEIGHT ) );
+                iconShapes.addShape( new Sprite( "images/blue_0.png", startX, startY, velX, velY ) );
                 break;
             case YELLOW:
-                yellows.addShape( new Sprite( "images/yellow_0.png", 0, 200, ICON_WIDTH, ICON_HEIGHT ) );
+                iconShapes.addShape( new Sprite( "images/yellow_0.png", startX, startY, velX, velY ) );
                 break;
         }
-        updateCountLabel();
     }
 
-    public void removeIcon( IconColor color ) {
-
-        switch ( color ) {
-            case RED:
-                reds.removeShape();
-                break;
-            case BLUE:
-                blues.removeShape();
-                break;
-
-            case YELLOW:
-                yellows.removeShape();
-                break;
-        }
-
-    }
-
-    private void updateCountLabel() {
-        iconCountLabel.setText(
-                "Red: " + reds.shapeCount() +
-                        "    Blue: " + blues.shapeCount() +
-                        "    Yellow: " + yellows.shapeCount()  );
-        repaint();
+    public void removeIcon() {
+        iconShapes.removeShape();
     }
 }
