@@ -1,6 +1,9 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * MainView.java - Description
@@ -32,16 +35,21 @@ public class MainView extends JFrame {
     }
 
     private void initButtons() {
+        //Initialize Show Button
         JButton showButton = new JButton( "Show" );
         showButton.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed( ActionEvent e ) {
-                createShapeWindow();
-                shapeWindow.show();
+                if ( shapeWindow == null )
+                    createShapeWindow();
+                shapeWindow.setVisible( true );
             }
         } );
         guiPanel.add( showButton );
+        //----------------------
 
+
+        //Initialize Exit Button
         JButton exitButton = new JButton( "Exit" );
         exitButton.addActionListener( new ActionListener() {
             @Override
@@ -53,15 +61,11 @@ public class MainView extends JFrame {
             }
         } );
         guiPanel.add( exitButton );
+        //---------------------
 
 
+        //Initialize Add Button
         JButton addButton = new JButton( "Add" );
-        guiPanel.add( addButton );
-
-        JButton removeButton = new JButton( "Remove" );
-        guiPanel.add( removeButton );
-
-
         addButton.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed( ActionEvent e ) {
@@ -75,7 +79,12 @@ public class MainView extends JFrame {
                 }
             }
         } );
+        guiPanel.add( addButton );
+        //------------------------
 
+
+        //Initialize Remove Button
+        JButton removeButton = new JButton( "Remove" );
         removeButton.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed( ActionEvent e ) {
@@ -89,6 +98,7 @@ public class MainView extends JFrame {
                 }
             }
         } );
+        guiPanel.add( removeButton );
     }
 
     private void initCheckBoxes() {
@@ -117,7 +127,13 @@ public class MainView extends JFrame {
             System.out.println( "Failed to load Look and Feel" );
         }
 
+        setTitle( "Multishape Project" );
         setSize( 300, 100 );
+        try {
+            setIconImage( ImageIO.read( new File( "images/blue_0.png" ) ) );
+        } catch ( IOException e ) {
+            e.printStackTrace();
+        }
     }
 
     public void destroyShapeWindow() {
@@ -125,7 +141,6 @@ public class MainView extends JFrame {
     }
 
     public void createShapeWindow() {
-        if ( shapeWindow == null )
-            shapeWindow = new ShapeWindow( this );
+        shapeWindow = new ShapeWindow( this );
     }
 }

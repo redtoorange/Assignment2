@@ -1,8 +1,13 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * ShapeWindow.java - Description
@@ -10,32 +15,73 @@ import java.awt.event.WindowEvent;
  * @author Andrew McGuiness
  * @version 10/4/2017
  */
-public class ShapeWindow {
-    private static final int DELAY = 10;
+public class ShapeWindow extends JFrame {
 
-    private JFrame shapeFrame;
+    private static final int DELAY = 10;
+    private static final int ICON_WIDTH = 100;
+    private static final int ICON_HEIGHT = 100;
+
+    private static final int WINDOW_WIDTH = 500;
+    private static final int WINDOW_HEIGHT = 500;
+
     private JPanel uiPanel;
     private JLabel iconCountLabel;
     private Timer updateTimer;
 
-    private ShapeCollection redIcons;
-    private ShapeCollection blueIcons;
-    private ShapeCollection yellowIcons;
+    private JLabel redLabel;
+    private MultiShapeIcon reds;
+
+    private JLabel blueLabel;
+    private MultiShapeIcon blues;
+
+    private JLabel yellowLabel;
+    private MultiShapeIcon yellows;
 
     private MainView view;
 
     public ShapeWindow( MainView view ) {
         this.view = view;
-        shapeFrame = new JFrame( "Shape Window" );
-        shapeFrame.setSize( 300, 300 );
+
+
+        reds = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
+        redLabel = new JLabel( reds );
+        redLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
+        redLabel.setBorder( new LineBorder( Color.BLACK ) );
+        add( redLabel );
+
+        blues = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
+        blueLabel = new JLabel( blues );
+        blueLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
+        blueLabel.setBorder( new LineBorder( Color.BLACK ) );
+        add( blueLabel );
+
+        yellows = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
+        yellowLabel = new JLabel( yellows );
+        yellowLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
+        yellowLabel.setBorder( new LineBorder( Color.BLACK ) );
+        add( yellowLabel );
+
+        initGUI();
+        initTimer();
+    }
+
+    private void initTimer() {
+        updateTimer = new Timer( DELAY, new ActionListener() {
+            public void actionPerformed( ActionEvent event ) {
+                reds.update();
+                blues.update();
+                yellows.update();
+                repaint();
+            }
+        } );
+    }
+
+    private void initGUI() {
+        initWindow();
 
         uiPanel = new JPanel();
-        uiPanel.setSize( 100, 50 );
-        shapeFrame.add( uiPanel );
-
-        redIcons = new ShapeCollection();
-        blueIcons = new ShapeCollection();
-        yellowIcons = new ShapeCollection();
+        uiPanel.setBounds( 0, 0, 200, 50 );
+        add( uiPanel );
 
         iconCountLabel = new JLabel();
         uiPanel.add( iconCountLabel );
@@ -46,41 +92,44 @@ public class ShapeWindow {
         hideButton.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed( ActionEvent e ) {
-                hide();
+                setVisible( false );
             }
         } );
+    }
 
+    private void initWindow() {
+        setTitle( "Shape Window" );
+        setSize( WINDOW_WIDTH, WINDOW_HEIGHT );
+        setLayout( null );
 
-        updateTimer = new Timer( DELAY, new ActionListener() {
-            public void actionPerformed( ActionEvent event ) {
-                //
-                System.out.println( "Iteration" );
-            }
-        } );
-
-
-        shapeFrame.addWindowListener( new WindowAdapter() {
+        addWindowListener( new WindowAdapter() {
             @Override
             public void windowClosing( WindowEvent e ) {
                 close();
             }
         } );
+
+        try {
+            setIconImage( ImageIO.read( new File( "images/red_1.png" ) ) );
+        } catch ( IOException e ) {
+            e.printStackTrace();
+        }
     }
 
 
-    public void show() {
-        updateTimer.start();
-        shapeFrame.setVisible( true );
+    @Override
+    public void setVisible( boolean visible ) {
+        if ( visible && !updateTimer.isRunning() ) {
+            updateTimer.start();
+        }
+
+        super.setVisible( visible );
     }
 
-    public void hide() {
-        shapeFrame.setVisible( false );
-    }
 
     public void close() {
-        hide();
+        setVisible( false );
         updateTimer.stop();
-        shapeFrame.dispose();
 
         view.destroyShapeWindow();
     }
@@ -89,39 +138,40 @@ public class ShapeWindow {
         //Do something
         switch ( color ) {
             case RED:
-                redIcons.addShapeIcon();
+                reds.addShape( new Sprite( "images/red_0.png", 0, 200, ICON_WIDTH, ICON_HEIGHT ) );
                 break;
             case BLUE:
-                blueIcons.addShapeIcon();
+                blues.addShape( new Sprite( "images/blue_0.png", 0, 200, ICON_WIDTH, ICON_HEIGHT ) );
                 break;
             case YELLOW:
-                yellowIcons.addShapeIcon();
+                yellows.addShape( new Sprite( "images/yellow_0.png", 0, 200, ICON_WIDTH, ICON_HEIGHT ) );
                 break;
         }
         updateCountLabel();
     }
 
     public void removeIcon( IconColor color ) {
-        //Do something
+
         switch ( color ) {
             case RED:
-                redIcons.removeShapeIcon();
+                reds.removeShape();
                 break;
             case BLUE:
-                blueIcons.removeShapeIcon();
+                blues.removeShape();
                 break;
+
             case YELLOW:
-                yellowIcons.removeShapeIcon();
+                yellows.removeShape();
                 break;
         }
-        updateCountLabel();
+
     }
 
     private void updateCountLabel() {
         iconCountLabel.setText(
-                "Red: " + redIcons.getCount() +
-                        "    Blue: " + blueIcons.getCount() +
-                        "    Yellow: " + yellowIcons.getCount() );
+                "Red: " + reds.shapeCount() +
+                        "    Blue: " + blues.shapeCount() +
+                        "    Yellow: " + yellows.shapeCount()  );
+        repaint();
     }
-
 }

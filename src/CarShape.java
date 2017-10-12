@@ -1,6 +1,8 @@
 import java.awt.*;
-import java.awt.geom.*;
-import java.util.*;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 
 /**
    A car that can be moved around.
@@ -64,7 +66,32 @@ public class CarShape implements MoveableShape
       g2.draw(roofTop);
       g2.draw(rearWindshield);
    }
-   
+
+   @Override
+   public int getX() {
+      return x;
+   }
+
+   @Override
+   public int getY() {
+      return y;
+   }
+
+   @Override
+   public int getWidth() {
+      return 0;
+   }
+
+   @Override
+   public int getHeight() {
+      return 0;
+   }
+
+   @Override
+   public void setPosition( int x, int y ) {
+
+   }
+
    private int x;
    private int y;
    private int width;
