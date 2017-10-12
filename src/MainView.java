@@ -131,11 +131,11 @@ public class MainView extends JFrame {
         }
     }
 
-    public void destroyShapeWindow() {
+    protected void destroyShapeWindow() {
         shapeWindow = null;
     }
 
-    public void createShapeWindow() {
+    private void createShapeWindow() {
         shapeWindow = new ShapeWindow( this );
     }
 }

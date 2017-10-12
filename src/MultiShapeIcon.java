@@ -58,22 +58,30 @@ public class MultiShapeIcon implements Icon {
     public void update() {
         for ( int i = 0; i < count; i++ ) {
             MoveableShape ms = shapes.get( i );
-            ms.applyVelocity();
 
-            if ( ms.getVelocityX() > 0 && ms.getX() > width ) {
-                ms.setPosition( -ms.getWidth(), ms.getY() );
+            if( ms instanceof Physics){
+                Physics physObj = (Physics) ms;
+
+                physObj.applyVelocity();
+
+                if ( physObj.getVelocityX() > 0 && ms.getX() > width ) {
+                    ms.setPosition( -ms.getWidth(), ms.getY() );
+                }
+
+                if ( physObj.getVelocityY() > 0 && ms.getY() > height ) {
+                    ms.setPosition( ms.getX(), -ms.getHeight() );
+                }
+
+                if ( physObj.getVelocityX() < 0 && ms.getX() + ms.getWidth() < 0 ) {
+                    ms.setPosition( width, ms.getY() );
+                }
+
+                if ( physObj.getVelocityY() < 0 && ms.getY() + ms.getHeight() < 0 ) {
+                    ms.setPosition( ms.getX(), height );
+                }
             }
-
-            if ( ms.getVelocityY() > 0 && ms.getY() > height ) {
-                ms.setPosition( ms.getX(), -ms.getHeight() );
-            }
-
-            if ( ms.getVelocityX() < 0 && ms.getX() + ms.getWidth() < 0 ) {
-                ms.setPosition( width, ms.getY() );
-            }
-
-            if ( ms.getVelocityY() < 0 && ms.getY() + ms.getHeight() < 0 ) {
-                ms.setPosition( ms.getX(), height );
+            else{
+                ms.translate( 1, 0 );
             }
         }
     }

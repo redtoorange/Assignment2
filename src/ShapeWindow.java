@@ -18,10 +18,9 @@ import java.util.Random;
  */
 public class ShapeWindow extends JFrame {
     private static final int DELAY = 10;
-    private static final int ICON_WIDTH = 100;
-    private static final int ICON_HEIGHT = 100;
     private static final int WINDOW_WIDTH = 500;
     private static final int WINDOW_HEIGHT = 500;
+
     private Random rand = new Random();
     private JPanel uiPanel;
     private JLabel iconCountLabel;
@@ -125,12 +124,12 @@ public class ShapeWindow extends JFrame {
     }
 
     public void addIcon( IconColor color ) {
+        int index = rand.nextInt( 3 );
         int startX = rand.nextInt( WINDOW_WIDTH );
         int startY = rand.nextInt( WINDOW_HEIGHT );
 
         int velX = rand.nextInt( 6 ) - 3;
         int velY = rand.nextInt( 6 ) - 3;
-
 
         while ( velX == 0 )
             velX = rand.nextInt( 6 ) - 3;
@@ -140,13 +139,13 @@ public class ShapeWindow extends JFrame {
         //Do something
         switch ( color ) {
             case RED:
-                iconShapes.addShape( new Sprite( "images/red_0.png", startX, startY, velX, velY ) );
+                iconShapes.addShape( new Sprite( "images/red_" + index + ".png", startX, startY, velX, velY ) );
                 break;
             case BLUE:
-                iconShapes.addShape( new Sprite( "images/blue_0.png", startX, startY, velX, velY ) );
+                iconShapes.addShape( new Sprite( "images/blue_" + index + ".png", startX, startY, velX, velY ) );
                 break;
             case YELLOW:
-                iconShapes.addShape( new Sprite( "images/yellow_0.png", startX, startY, velX, velY ) );
+                iconShapes.addShape( new Sprite( "images/yellow_" + index + ".png", startX, startY, velX, velY ) );
                 break;
         }
     }

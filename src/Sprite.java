@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author Andrew McGuiness
  * @version 10/10/2017
  */
-public class Sprite implements MoveableShape {
+public class Sprite implements MoveableShape, Physics {
     private BufferedImage image;
 
     private int positionX;
@@ -53,17 +53,6 @@ public class Sprite implements MoveableShape {
         this.velocityX = velocityX;
         this.velocityY = velocityY;
     }
-
-
-//    public Sprite( String path, int startX, int startY, int drawWidth, int drawHeight ) {
-//        positionX = startX;
-//        positionY = startY;
-//
-//        loadImage( path );
-//
-//        this.drawWidth = Math.max( drawWidth, 0 );
-//        this.drawHeight = Math.max( drawHeight, 0 );
-//    }
 
     //Load an Image file from disc into memory
     private boolean loadImage( String path ) {

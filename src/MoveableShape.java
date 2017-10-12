@@ -28,10 +28,4 @@ public interface MoveableShape {
     int getHeight();
 
     void setPosition( int x, int y );
-
-    void applyVelocity();
-
-    int getVelocityX();
-
-    int getVelocityY();
 }
