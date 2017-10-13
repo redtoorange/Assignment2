@@ -1,3 +1,5 @@
+package shape;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -5,12 +7,13 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Sprite.java - Description
+ * SpriteShape.java - A special type of MovableShape that contains an BufferedImage (Sprite) and has simulated physics
+ * attached to it.  This allows each SpriteShape to have it's own, independent x and y velocity.
  *
  * @author Andrew McGuiness
  * @version 10/10/2017
  */
-public class Sprite implements MovableShape, Physics {
+public class SpriteShape implements MovableShape, PhysicsShape {
     private BufferedImage image;
 
     private int positionX;
@@ -22,9 +25,9 @@ public class Sprite implements MovableShape, Physics {
     /**
      * Load an image file as a sprite.  Width and Height will be based on the image itself, position will be (0, 0).
      *
-     * @param path String image location.
+     * @param path image location on disk
      */
-    public Sprite( String path ) {
+    public SpriteShape( String path ) {
         this( path, 0, 0, 0, 0 );
     }
 
@@ -32,11 +35,13 @@ public class Sprite implements MovableShape, Physics {
      * Load an image file as a sprite.  Height and Width will be based on the image itself, position will be
      * (startX, startY).
      *
-     * @param path   String image location
-     * @param startX starting X position
-     * @param startY starting Y position
+     * @param path      image location on disk
+     * @param startX    starting x-position
+     * @param startY    starting y-position
+     * @param velocityX starting x-velocity
+     * @param velocityY starting y-velocity
      */
-    public Sprite( String path, int startX, int startY, int velocityX, int velocityY ) {
+    public SpriteShape( String path, int startX, int startY, int velocityX, int velocityY ) {
         loadImage( path );
 
         setPosition( startX, startY );
@@ -57,6 +62,7 @@ public class Sprite implements MovableShape, Physics {
 
         return success;
     }
+
 
     @Override
     public void draw( Graphics2D g2 ) {
@@ -102,7 +108,7 @@ public class Sprite implements MovableShape, Physics {
     }
 
     @Override
-    public void setVelocity( int x, int y ) {
+    public void setVelocity( int velocityX, int velocityY ) {
         this.velocityX = velocityX;
         this.velocityY = velocityY;
     }

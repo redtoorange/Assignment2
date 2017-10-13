@@ -1,5 +1,7 @@
+package view;
+
 /**
- * IconColor.java - Description
+ * IconColor.java - Color possibilities for an Icon.
  *
  * @author Andrew McGuiness
  * @version 10/9/2017

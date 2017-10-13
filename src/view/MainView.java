@@ -1,10 +1,14 @@
+package view;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 
 /**
- * MainView.java - Description
+ * MainView.java - The primary window of the application.  A Special JFrame that has four buttons and 3 checkboxes.  The
+ * show button opens a second window, the ShapeWindow.  The Add button adds MovableShapes to the ShapeWindow.  The
+ * remove button removes the most recently added shape from the ShapeWindow.  The exit button exits the application.
  *
  * @author Andrew McGuiness
  * @version 10/9/2017
@@ -18,8 +22,10 @@ public class MainView extends JFrame {
     private JCheckBox redCheck;
     private JCheckBox yellowCheck;
 
+    /** Create a new MainView window and display it. */
     public MainView() {
         initGUI();
+        setVisible( true );
     }
 
     private void initGUI() {
@@ -69,7 +75,7 @@ public class MainView extends JFrame {
         guiPanel.add( yellowCheck );
     }
 
-    //Initialize the look and feel of the MainView JFrame
+    //Initialize the look and feel of the view.MainView JFrame
     private void initWindow() {
         setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
 
@@ -81,7 +87,7 @@ public class MainView extends JFrame {
             System.out.println( "Failed to load Look and Feel" );
         }
 
-        setTitle( "Multishape Project" );
+        setTitle( "MultiShape Project" );
         setSize( 300, 100 );
 
         //Give the window a nice icon
@@ -90,10 +96,6 @@ public class MainView extends JFrame {
         } catch ( IOException e ) {
             e.printStackTrace();
         }
-    }
-
-    protected void destroyShapeWindow() {
-        shapeWindow = null;
     }
 
     private void createShapeWindow() {
