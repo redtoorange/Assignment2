@@ -2,8 +2,6 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
@@ -22,21 +20,13 @@ public class ShapeWindow extends JFrame {
     private static final int WINDOW_HEIGHT = 500;
 
     private Random rand = new Random();
-    private JPanel uiPanel;
-    private JLabel iconCountLabel;
-    private Timer updateTimer;
 
-    private JLabel iconLabel;
+    private Timer updateTimer;
     private MultiShapeIcon iconShapes;
 
-    private MainView view;
-
-    public ShapeWindow( MainView view ) {
-        this.view = view;
-
-
+    public ShapeWindow() {
         iconShapes = new MultiShapeIcon( WINDOW_WIDTH, WINDOW_HEIGHT );
-        iconLabel = new JLabel( iconShapes );
+        JLabel iconLabel = new JLabel( iconShapes );
         iconLabel.setBounds( 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT );
         iconLabel.setBorder( new LineBorder( Color.BLACK ) );
         add( iconLabel );
@@ -46,41 +36,26 @@ public class ShapeWindow extends JFrame {
     }
 
     private void initTimer() {
-        updateTimer = new Timer( DELAY, new ActionListener() {
-            public void actionPerformed( ActionEvent event ) {
-                iconShapes.update();
-                repaint();
-            }
+        updateTimer = new Timer( DELAY, event -> {
+            iconShapes.update();
+            repaint();
         } );
     }
 
     private void initGUI() {
         initWindow();
 
-        uiPanel = new JPanel();
+        JPanel uiPanel = new JPanel();
         uiPanel.setBounds( 0, 0, 200, 50 );
         add( uiPanel );
 
-        iconCountLabel = new JLabel();
-        uiPanel.add( iconCountLabel );
-
         JButton hideButton = new JButton( "Hide" );
+        hideButton.addActionListener( e -> setVisible( false ) );
         uiPanel.add( hideButton );
-        hideButton.addActionListener( new ActionListener() {
-            @Override
-            public void actionPerformed( ActionEvent e ) {
-                setVisible( false );
-            }
-        } );
 
         JButton exitButton = new JButton( "Exit" );
+        exitButton.addActionListener( e -> close() );
         uiPanel.add( exitButton );
-        exitButton.addActionListener( new ActionListener() {
-            @Override
-            public void actionPerformed( ActionEvent e ) {
-                close();
-            }
-        } );
     }
 
     private void initWindow() {
@@ -105,12 +80,11 @@ public class ShapeWindow extends JFrame {
 
     @Override
     public void setVisible( boolean visible ) {
-        if ( visible && !updateTimer.isRunning() ) {
+        if ( visible && !updateTimer.isRunning() )
             updateTimer.start();
-        }
-        if ( !visible && updateTimer.isRunning() ) {
+
+        else if ( !visible && updateTimer.isRunning() )
             updateTimer.stop();
-        }
 
         super.setVisible( visible );
     }
@@ -119,8 +93,8 @@ public class ShapeWindow extends JFrame {
     public void close() {
         setVisible( false );
         updateTimer.stop();
-
-        view.destroyShapeWindow();
+        iconShapes.clear();
+        dispose();
     }
 
     public void addIcon( IconColor color ) {

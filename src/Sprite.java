@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author Andrew McGuiness
  * @version 10/10/2017
  */
-public class Sprite implements MoveableShape, Physics {
+public class Sprite implements MovableShape, Physics {
     private BufferedImage image;
 
     private int positionX;
@@ -18,11 +18,6 @@ public class Sprite implements MoveableShape, Physics {
 
     private int velocityX;
     private int velocityY;
-
-    private int imageWidth;
-    private int drawWidth;
-    private int imageHeight;
-    private int drawHeight;
 
     /**
      * Load an image file as a sprite.  Width and Height will be based on the image itself, position will be (0, 0).
@@ -42,16 +37,10 @@ public class Sprite implements MoveableShape, Physics {
      * @param startY starting Y position
      */
     public Sprite( String path, int startX, int startY, int velocityX, int velocityY ) {
-        positionX = startX;
-        positionY = startY;
-
         loadImage( path );
 
-        drawWidth = imageWidth;
-        drawHeight = imageHeight;
-
-        this.velocityX = velocityX;
-        this.velocityY = velocityY;
+        setPosition( startX, startY );
+        setVelocity( velocityX, velocityY );
     }
 
     //Load an Image file from disc into memory
@@ -61,10 +50,6 @@ public class Sprite implements MoveableShape, Physics {
         try {
             File f = new File( path );
             image = ImageIO.read( f );
-
-            imageWidth = image.getWidth();
-            imageHeight = image.getHeight();
-
         } catch ( IOException e ) {
             System.err.println( "FAILED TO LOAD IMAGE FILE: " + path );
             success = false;
@@ -75,13 +60,11 @@ public class Sprite implements MoveableShape, Physics {
 
     @Override
     public void draw( Graphics2D g2 ) {
-        //g2.scale( drawWidth/ ((double)imageWidth), drawHeight/((double)imageHeight) );
         g2.drawImage( image, positionX, positionY, null );
-        System.out.println( "Drawing sprite at " + positionX + ", " + positionY );
     }
 
     @Override
-    public void applyVelocity() {
+    public void applyMovement() {
         positionX += velocityX;
         positionY += velocityY;
     }
@@ -104,18 +87,24 @@ public class Sprite implements MoveableShape, Physics {
 
     @Override
     public int getWidth() {
-        return drawWidth;
+        return image.getWidth();
     }
 
     @Override
     public int getHeight() {
-        return drawHeight;
+        return image.getHeight();
     }
 
     @Override
     public void setPosition( int x, int y ) {
         positionX = x;
         positionY = y;
+    }
+
+    @Override
+    public void setVelocity( int x, int y ) {
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
     }
 
     @Override

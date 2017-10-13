@@ -7,9 +7,9 @@ import java.awt.*;
 public class ShapeIcon implements Icon {
     private int width;
     private int height;
-    private MoveableShape shape;
+    private MovableShape shape;
 
-    public ShapeIcon( MoveableShape shape, int width, int height ) {
+    public ShapeIcon( MovableShape shape, int width, int height ) {
         this.shape = shape;
         this.width = width;
         this.height = height;
@@ -28,7 +28,7 @@ public class ShapeIcon implements Icon {
         shape.draw( g2 );
     }
 
-    public MoveableShape getShape() {
+    public MovableShape getShape() {
         return shape;
     }
 }

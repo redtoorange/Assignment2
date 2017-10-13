@@ -16,7 +16,7 @@ public class MultiShapeIcon implements Icon {
     private int width;
     private int height;
 
-    private ArrayList< MoveableShape > shapes;
+    private ArrayList< MovableShape > shapes;
     private int count = 0;
 
     public MultiShapeIcon( int width, int height ) {
@@ -43,7 +43,7 @@ public class MultiShapeIcon implements Icon {
     }
 
 
-    public void addShape( MoveableShape shape ) {
+    public void addShape( MovableShape shape ) {
         shapes.add( shape );
         count++;
     }
@@ -57,33 +57,33 @@ public class MultiShapeIcon implements Icon {
 
     public void update() {
         for ( int i = 0; i < count; i++ ) {
-            MoveableShape ms = shapes.get( i );
+            MovableShape ms = shapes.get( i );
 
-            if( ms instanceof Physics){
-                Physics physObj = (Physics) ms;
+            if ( ms instanceof Physics ) {
+                Physics physObj = ( Physics ) ms;
 
-                physObj.applyVelocity();
+                physObj.applyMovement();
 
-                if ( physObj.getVelocityX() > 0 && ms.getX() > width ) {
+                if ( physObj.getVelocityX() > 0 && ms.getX() > width )
                     ms.setPosition( -ms.getWidth(), ms.getY() );
-                }
 
-                if ( physObj.getVelocityY() > 0 && ms.getY() > height ) {
+                if ( physObj.getVelocityY() > 0 && ms.getY() > height )
                     ms.setPosition( ms.getX(), -ms.getHeight() );
-                }
 
-                if ( physObj.getVelocityX() < 0 && ms.getX() + ms.getWidth() < 0 ) {
+                if ( physObj.getVelocityX() < 0 && ms.getX() + ms.getWidth() < 0 )
                     ms.setPosition( width, ms.getY() );
-                }
 
-                if ( physObj.getVelocityY() < 0 && ms.getY() + ms.getHeight() < 0 ) {
+                if ( physObj.getVelocityY() < 0 && ms.getY() + ms.getHeight() < 0 )
                     ms.setPosition( ms.getX(), height );
-                }
-            }
-            else{
+            } else {
                 ms.translate( 1, 0 );
             }
         }
+    }
+
+    public void clear() {
+        shapes.clear();
+        count = 0;
     }
 }
 

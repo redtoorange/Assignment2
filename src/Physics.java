@@ -5,7 +5,9 @@
  * @version 10/12/2017
  */
 public interface Physics {
-    void applyVelocity();
+    void applyMovement();
+
+    void setVelocity(int x, int y);
 
     int getVelocityX();
 

@@ -3,7 +3,7 @@ import java.awt.*;
 /**
  * A shape that can be moved around.
  */
-public interface MoveableShape {
+public interface MovableShape {
     /**
      * Draws the shape.
      *
