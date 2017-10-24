@@ -7,5 +7,20 @@ package view;
  * @version 10/9/2017
  */
 public enum IconColor {
-    BLUE, YELLOW, RED
+    BLUE( "blue" ), YELLOW( "yellow" ), RED( "red" );
+
+
+    private String key;
+
+    IconColor( String key ) {
+        this.key = key;
+    }
+
+    /**
+     * Get the enum's name as a lower-cased String
+     * @return  String form of the IconColor
+     */
+    public String toString() {
+        return key;
+    }
 }

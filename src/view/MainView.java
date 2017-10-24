@@ -67,12 +67,12 @@ public class MainView extends JFrame {
 
     private void initCheckBoxes() {
         blueCheck = new JCheckBox( "Blue", true );
-        redCheck = new JCheckBox( "Red", false );
         yellowCheck = new JCheckBox( "Yellow", false );
+        redCheck = new JCheckBox( "Red", false );
 
         guiPanel.add( blueCheck );
-        guiPanel.add( redCheck );
         guiPanel.add( yellowCheck );
+        guiPanel.add( redCheck );
     }
 
     //Initialize the look and feel of the view.MainView JFrame

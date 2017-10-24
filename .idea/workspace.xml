@@ -11,140 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SpriteShape.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/shape/SpriteShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1419">
-              <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#SpriteShape#0;class#SpriteShape#0" expanded="true" />
-                <element signature="docComment;method#SpriteShape#1;class#SpriteShape#0" expanded="true" />
-                <element signature="method#draw#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#applyMovement#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#translate#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#getX#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#getY#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#getWidth#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#getHeight#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#setPosition#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#setVelocity#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#getVelocityX#0;class#SpriteShape#0" expanded="false" />
-                <element signature="method#getVelocityY#0;class#SpriteShape#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/MainView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="10" column="116" lean-forward="false" selection-start-line="10" selection-start-column="116" selection-end-line="10" selection-end-column="116" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#MainView#0;class#MainView#0" expanded="true" />
-                <element signature="method#initCheckBoxes#0;class#MainView#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IconColor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/IconColor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShapeWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/ShapeWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
-                <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
-                <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
-                <element signature="docComment;method#addIcon#0;class#ShapeWindow#0" expanded="true" />
-                <element signature="docComment;method#removeIcon#0;class#ShapeWindow#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhysicsShape.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/shape/PhysicsShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-              <folding>
-                <element signature="docComment;method#applyMovement#0;class#PhysicsShape#0" expanded="true" />
-                <element signature="docComment;method#setVelocity#0;class#PhysicsShape#0" expanded="true" />
-                <element signature="docComment;method#getVelocityX#0;class#PhysicsShape#0" expanded="true" />
-                <element signature="docComment;method#getVelocityY#0;class#PhysicsShape#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovableShape.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/shape/MovableShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-              <folding>
-                <element signature="docComment;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#draw#0;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#translate#0;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#getX#0;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#getY#0;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#getWidth#0;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#getHeight#0;class#MovableShape#0" expanded="true" />
-                <element signature="docComment;method#setPosition#0;class#MovableShape#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiShapeIcon.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/shape/MultiShapeIcon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-              <folding>
-                <element signature="docComment;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#MultiShapeIcon#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#addShape#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#removeShape#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#update#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#clear#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#getIconWidth#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#getIconHeight#0;class#MultiShapeIcon#0" expanded="true" />
-                <element signature="docComment;method#paintIcon#0;class#MultiShapeIcon#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Icon.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/Icon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-              <folding>
-                <element signature="docComment;method#paintIcon#0;class#Icon#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -187,11 +54,11 @@
         <option value="$PROJECT_DIR$/src/shape/Sprite.java" />
         <option value="$PROJECT_DIR$/src/shape/PhysicsShape.java" />
         <option value="$PROJECT_DIR$/src/shape/MovableShape.java" />
-        <option value="$PROJECT_DIR$/src/view/IconColor.java" />
-        <option value="$PROJECT_DIR$/src/view/ShapeWindow.java" />
         <option value="$PROJECT_DIR$/src/shape/ShapeIcon.java" />
         <option value="$PROJECT_DIR$/src/shape/SpriteShape.java" />
         <option value="$PROJECT_DIR$/src/view/MainView.java" />
+        <option value="$PROJECT_DIR$/src/view/ShapeWindow.java" />
+        <option value="$PROJECT_DIR$/src/view/IconColor.java" />
         <option value="$PROJECT_DIR$/src/shape/MultiShapeIcon.java" />
       </list>
     </option>
@@ -207,9 +74,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -267,9 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,6 +147,12 @@
               <item name="Assignment2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Assignment2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Assignment2" type="b2602c69:ProjectViewProjectNode" />
@@ -299,6 +171,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -474,11 +348,13 @@
       <workItem from="1507843417577" duration="2772000" />
       <workItem from="1507893317238" duration="260000" />
       <workItem from="1507893632441" duration="12185000" />
+      <workItem from="1508241969578" duration="1132000" />
+      <workItem from="1508243190539" duration="1618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35801000" />
+    <option name="totallyTimeSpent" value="38551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -489,7 +365,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -497,17 +372,15 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21847826" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3869565" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3869565" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114605546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11673774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -515,7 +388,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -564,47 +440,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/shape/PhysicsShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="docComment;class#PhysicsShape#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shape/MovableShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="docComment;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#draw#0;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#translate#0;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#getX#0;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#getY#0;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#getWidth#0;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#getHeight#0;class#MovableShape#0" expanded="true" />
-            <element signature="docComment;method#setPosition#0;class#MovableShape#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#MainView#0" expanded="true" />
-            <element signature="docComment;method#MainView#0;class#MainView#0" expanded="true" />
-            <element signature="method#initCheckBoxes#0;class#MainView#0" expanded="false" />
-            <element signature="method#initWindow#0;class#MainView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiShapeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -621,8 +456,6 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#MainView#0" expanded="true" />
             <element signature="docComment;method#MainView#0;class#MainView#0" expanded="true" />
-            <element signature="method#initCheckBoxes#0;class#MainView#0" expanded="false" />
-            <element signature="method#initWindow#0;class#MainView#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -633,6 +466,7 @@
           <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
@@ -648,6 +482,7 @@
           <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#0;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#1;class#SpriteShape#0" expanded="true" />
             <element signature="method#draw#0;class#SpriteShape#0" expanded="false" />
@@ -670,7 +505,10 @@
         <state relative-caret-position="22">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding>
-            <element signature="docComment;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#applyMovement#0;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#setVelocity#0;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#getVelocityX#0;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#getVelocityY#0;class#PhysicsShape#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -724,6 +562,7 @@
           <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
@@ -739,6 +578,7 @@
           <caret line="123" column="29" lean-forward="true" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#0;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#1;class#SpriteShape#0" expanded="true" />
             <element signature="method#draw#0;class#SpriteShape#0" expanded="false" />
@@ -808,8 +648,6 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#MainView#0" expanded="true" />
             <element signature="docComment;method#MainView#0;class#MainView#0" expanded="true" />
-            <element signature="method#initCheckBoxes#0;class#MainView#0" expanded="false" />
-            <element signature="method#initWindow#0;class#MainView#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -820,6 +658,7 @@
           <caret line="109" column="98" lean-forward="false" selection-start-line="109" selection-start-column="98" selection-end-line="109" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
@@ -831,19 +670,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AnimationTester.java" />
     <entry file="file://$PROJECT_DIR$/src/CarShape.java" />
-    <entry file="file://$PROJECT_DIR$/src/shape/ShapeIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shape/ShapeIcon.java" />
     <entry file="file://$PROJECT_DIR$/src/shape/SpriteShape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1342">
           <caret line="90" column="39" lean-forward="true" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#0;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#1;class#SpriteShape#0" expanded="true" />
             <element signature="method#draw#0;class#SpriteShape#0" expanded="false" />
@@ -878,19 +712,11 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#MainView#0" expanded="true" />
             <element signature="docComment;method#MainView#0;class#MainView#0" expanded="true" />
-            <element signature="method#initCheckBoxes#0;class#MainView#0" expanded="false" />
-            <element signature="method#initWindow#0;class#MainView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/shape/ShapeIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shape/ShapeIcon.java" />
     <entry file="file://$PROJECT_DIR$/src/ShapeCollection.java" />
     <entry file="file://$PROJECT_DIR$/src/view/ShapeWindow.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -898,6 +724,7 @@
           <caret line="89" column="26" lean-forward="false" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
@@ -921,6 +748,7 @@
           <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
             <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
@@ -1000,51 +828,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MultiShapeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/shape/ShapeIcon.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ShapeWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        <state relative-caret-position="2288">
+          <caret line="185" column="22" lean-forward="false" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
-            <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
-            <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
-            <element signature="docComment;method#addIcon#0;class#ShapeWindow#0" expanded="true" />
-            <element signature="docComment;method#removeIcon#0;class#ShapeWindow#0" expanded="true" />
+            <element signature="docComment;class#Component#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/IconColor.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="198">
+          <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/shape/ShapeIcon.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/Icon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="176">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="docComment;method#paintIcon#0;class#Icon#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8426">
+          <caret line="756" column="16" lean-forward="false" selection-start-line="756" selection-start-column="16" selection-end-line="756" selection-end-column="16" />
+          <folding>
+            <element signature="docComment;method#setComponentZOrder#0;class#Container#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/shape.MovableShape">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>shape.MovableShape</OriginalElement>
+          <nodes>
+            <node x="" y="">view.MainView</node>
+            <node x="" y="">javax.swing.Icon</node>
+            <node x="" y="">shape.MovableShape</node>
+            <node x="" y="">view.ShapeWindow</node>
+            <node x="" y="">shape.SpriteShape</node>
+            <node x="" y="">shape.MultiShapeIcon</node>
+            <node x="" y="">view.IconColor</node>
+            <node x="" y="">shape.PhysicsShape</node>
+            <node x="" y="">MultiShapeTest</node>
+            <node x="" y="">javax.swing.JFrame</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.9346153846153868" x="301.1959803050995" y="186.43386595341244" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/D:/Programming/ITEC324/Assignment2/src/view">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/view</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="828.5" y="434.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/shape/SpriteShape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1419">
-          <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+        <state relative-caret-position="-778">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#0;class#SpriteShape#0" expanded="true" />
             <element signature="docComment;method#SpriteShape#1;class#SpriteShape#0" expanded="true" />
             <element signature="method#draw#0;class#SpriteShape#0" expanded="false" />
@@ -1064,33 +936,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="10" column="116" lean-forward="false" selection-start-line="10" selection-start-column="116" selection-end-line="10" selection-end-column="116" />
+        <state relative-caret-position="-558">
+          <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#MainView#0" expanded="true" />
             <element signature="docComment;method#MainView#0;class#MainView#0" expanded="true" />
-            <element signature="method#initCheckBoxes#0;class#MainView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shape/PhysicsShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding>
-            <element signature="docComment;method#applyMovement#0;class#PhysicsShape#0" expanded="true" />
-            <element signature="docComment;method#setVelocity#0;class#PhysicsShape#0" expanded="true" />
-            <element signature="docComment;method#getVelocityX#0;class#PhysicsShape#0" expanded="true" />
-            <element signature="docComment;method#getVelocityY#0;class#PhysicsShape#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/shape/MovableShape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        <state relative-caret-position="190">
+          <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding>
             <element signature="docComment;class#MovableShape#0" expanded="true" />
             <element signature="docComment;method#draw#0;class#MovableShape#0" expanded="true" />
@@ -1104,38 +963,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Component.java">
+    <entry file="file://$PROJECT_DIR$/src/view/ShapeWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2288">
-          <caret line="185" column="22" lean-forward="false" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
+        <state relative-caret-position="2376">
+          <caret line="108" column="26" lean-forward="false" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
           <folding>
-            <element signature="docComment;class#Component#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ShapeWindow#0" expanded="true" />
+            <element signature="docComment;method#ShapeWindow#0;class#ShapeWindow#0" expanded="true" />
+            <element signature="docComment;method#setVisible#0;class#ShapeWindow#0" expanded="true" />
+            <element signature="docComment;method#close#0;class#ShapeWindow#0" expanded="true" />
+            <element signature="docComment;method#addIcon#0;class#ShapeWindow#0" expanded="true" />
+            <element signature="docComment;method#removeIcon#0;class#ShapeWindow#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Override.java">
+    <entry file="file://$PROJECT_DIR$/src/MultiShapeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        <state relative-caret-position="44">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/Icon.java">
+    <entry file="file://$PROJECT_DIR$/src/view/IconColor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="440">
+          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
-            <element signature="docComment;method#paintIcon#0;class#Icon#0" expanded="true" />
+            <element signature="docComment;class#IconColor#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/shape/MultiShapeIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        <state relative-caret-position="58">
+          <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
           <folding>
             <element signature="docComment;class#MultiShapeIcon#0" expanded="true" />
             <element signature="docComment;method#MultiShapeIcon#0;class#MultiShapeIcon#0" expanded="true" />
@@ -1146,6 +1011,19 @@
             <element signature="docComment;method#getIconWidth#0;class#MultiShapeIcon#0" expanded="true" />
             <element signature="docComment;method#getIconHeight#0;class#MultiShapeIcon#0" expanded="true" />
             <element signature="docComment;method#paintIcon#0;class#MultiShapeIcon#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shape/PhysicsShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;method#applyMovement#0;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#setVelocity#0;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#getVelocityX#0;class#PhysicsShape#0" expanded="true" />
+            <element signature="docComment;method#getVelocityY#0;class#PhysicsShape#0" expanded="true" />
           </folding>
         </state>
       </provider>

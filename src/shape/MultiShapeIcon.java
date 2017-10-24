@@ -83,8 +83,9 @@ public class MultiShapeIcon implements Icon {
     }
 
     /**
-     *  Get the Icon's Width, used for bounds and wrapping of shapes.
-     * @return  width of the Icon
+     * Get the Icon's Width, used for bounds and wrapping of shapes.
+     *
+     * @return width of the Icon
      */
     @Override
     public int getIconWidth() {
@@ -92,8 +93,9 @@ public class MultiShapeIcon implements Icon {
     }
 
     /**
-     *  Get the Icon's Height, used for bounds and wrapping of shapes.
-     * @return  height of the Icon
+     * Get the Icon's Height, used for bounds and wrapping of shapes.
+     *
+     * @return height of the Icon
      */
     @Override
     public int getIconHeight() {
@@ -102,6 +104,7 @@ public class MultiShapeIcon implements Icon {
 
     /**
      * Paint all of the MovableShapes contained inside this MultiShapeIcon
+     *
      * @param c Unused.
      * @param g Graphics instance used to draw this Icon.
      * @param x Unused.

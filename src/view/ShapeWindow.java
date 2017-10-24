@@ -26,6 +26,7 @@ public class ShapeWindow extends JFrame {
     private static final int DELAY = 10;
     private static final int WINDOW_WIDTH = 500;
     private static final int WINDOW_HEIGHT = 500;
+    private static int MAX_VEL = 3;
 
     private Random rand = new Random();
     private Timer updateTimer;
@@ -75,30 +76,16 @@ public class ShapeWindow extends JFrame {
      * @param color Color of the icon to be added.
      */
     public void addIcon( IconColor color ) {
-        int index = rand.nextInt( 3 );
+        int imageIndex = rand.nextInt( 3 );
         int startX = rand.nextInt( WINDOW_WIDTH );
         int startY = rand.nextInt( WINDOW_HEIGHT );
 
-        int velX = rand.nextInt( 6 ) - 3;
-        int velY = rand.nextInt( 6 ) - 3;
+        //Generate Random X,Y Velocity
+        int velX = ( rand.nextInt( MAX_VEL ) + 1 ) * ( rand.nextBoolean() ? 1 : -1 );
+        int velY = ( rand.nextInt( MAX_VEL ) + 1 ) * ( rand.nextBoolean() ? 1 : -1 );
 
-        while ( velX == 0 )
-            velX = rand.nextInt( 6 ) - 3;
-        while ( velY == 0 )
-            velY = rand.nextInt( 6 ) - 3;
-
-        //Do something
-        switch ( color ) {
-            case RED:
-                iconShapes.addShape( new SpriteShape( "images/red_" + index + ".png", startX, startY, velX, velY ) );
-                break;
-            case BLUE:
-                iconShapes.addShape( new SpriteShape( "images/blue_" + index + ".png", startX, startY, velX, velY ) );
-                break;
-            case YELLOW:
-                iconShapes.addShape( new SpriteShape( "images/yellow_" + index + ".png", startX, startY, velX, velY ) );
-                break;
-        }
+        //Add a shape to the collection based on the Color and a random imageIndex.
+        iconShapes.addShape( new SpriteShape( "images/" + color + "_" + imageIndex + ".png", startX, startY, velX, velY ) );
     }
 
     /** Remove the last icon added to the ShapeWindow. */
@@ -118,8 +105,8 @@ public class ShapeWindow extends JFrame {
         initWindow();
 
         JPanel uiPanel = new JPanel();
-        uiPanel.setBounds( 0, 0, 200, 50 );
-        add( uiPanel );
+        uiPanel.setBounds( 1, 1, 150, 50 );
+        add( uiPanel, 0 );
 
         JButton hideButton = new JButton( "Hide" );
         hideButton.addActionListener( e -> setVisible( false ) );
